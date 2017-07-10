@@ -15,7 +15,7 @@ class ContractController extends Controller
      */
     public function index()
     {
-        $contracts = Contract::paginate(9);
+        $contracts = Contract::paginate(15);
         $customers = Customer::all();
 
         return view('allContracts', compact('contracts', 'customers'));
@@ -41,7 +41,7 @@ class ContractController extends Controller
     {
         $this->validate(request(),[
 
-                'customers_id'   => 'required',
+                'customer_id'    => 'required',
                 'contract'       => 'required',
                 'iniDate'        => 'required',
                 'endDate'        => 'required',
@@ -49,9 +49,9 @@ class ContractController extends Controller
                 'balance'        => 'required'
             ]);
 
-        Contract::create(request(['customers_id','contract','iniDate','endDate','amountTotal','balance']));
+        Contract::create(request(['customer_id','contract','iniDate','endDate','amountTotal','balance']));
 
-        $contracts = Contract::paginate(9);
+        $contracts = Contract::paginate(15);
         $customers = Customer::all();
 
         return view('allContracts', compact('contracts', 'customers'));

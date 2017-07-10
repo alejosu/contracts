@@ -26,6 +26,7 @@ Route::post('/home', 'ContractController@store');
 Route::get('/customers', 'CustomerController@index')->name('allCustomers');
 Route::get('/customers/{custs}', 'CustomerController@show')->name('customerView');
 Route::post('/customers', 'CustomerController@store');
+Route::get('/customers/{custs}/edit', 'CustomerController@show')->name('customerView');
 
 
 

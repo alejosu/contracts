@@ -10,7 +10,7 @@ class Contract extends Model
 {
     
     protected $fillable = [
-    	'customers_id',
+    	'customer_id',
     	'contract',
     	'iniDate',
     	'endDate',

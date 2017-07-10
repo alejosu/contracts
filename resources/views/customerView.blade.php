@@ -29,8 +29,9 @@
 			</table>
 		</div>
 		<hr>
-		<div class="row">
+		<div class="/customers">
 			<form action="">
+				{{ csrf_field() }}
 				<div class="form-group">
 					<input type="text" class="form-control" placeholder="Teléfono">
 				</div>
